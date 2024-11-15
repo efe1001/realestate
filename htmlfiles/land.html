@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land</title>
+    <link rel="stylesheet" href="/style.css/index.css">
+    <link rel="stylesheet" href="/style.css/recommend.css">
+</head>
+<body>
+    <header class="headerbar">
+
+    </header>
+
+    <section class="filter-section">
+        <h2>LAND</h2>
+        <div class="filters">
+            <input type="text" id="location" placeholder="Country or Town" oninput="filterProperties()">
+            <select id="propertyType" onchange="filterProperties()">
+                <option value="">Property Type</option>
+                <option value="House">House</option>
+                <option value="Apartment">Apartment</option>
+                <option value="Land">Land</option>
+            </select>
+            <select id="transactionType" onchange="filterProperties()">
+                <option value="">Transaction Type</option>
+                <option value="Rent">Rent</option>
+                <option value="Sell">Sell</option>
+                <option value="Buy">Buy</option>
+            </select>
+            <select id="rooms" onchange="filterProperties()">
+                <option value="">Rooms</option>
+                <option value="1">1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+                <option value="4">4+ Rooms</option>
+            </select>
+            <button id="resetButton" onclick="resetFilters()">Reset Filters</button>
+        </div>
+    </section>
+
+    <section class="property-list" id="propertyList">
+        <!-- Sample property cards -->
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3<br>Transaction: Rent</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3<br>Transaction: Rent</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3<br>Transaction: Rent</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3<br>Transaction: Rent</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3<br>Transaction: Rent</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3<br>Transaction: Rent</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3<br>Transaction: Rent</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3<br>Transaction: Rent</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3<br>Transaction: Rent</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3<br>Transaction: Rent</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3<br>Transaction: Rent</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3<br>Transaction: Rent</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3<br>Transaction: Rent</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3<br>Transaction: Rent</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3<br>Transaction: Rent</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3<br>Transaction: Sell</p>
+        </div>
+       
+        
+       
+    
+      
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+      
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+      
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+      
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+      
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+     
+     
+      
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+    
+       
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: USA<br>Town: NEW YORK<br>Type: House<br>Rooms: 3</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: Nigeria<br>Town: Abuja<br>Type: House<br>Rooms: 3</p>
+        </div>
+        <div class="property-card">
+            <img src="https://via.placeholder.com/300x180.png?text=Building+1" alt="Building 1">
+            <h3>Property 1</h3>
+            <p class="property-details">Country: USA<br>Town: NEW YORK<br>Type: House<br>Rooms: 3</p>
+        </div>
+        <!-- Add more property cards as needed -->
+    </section>
+
+    <div class="pagination" id="pagination"></div>
+
+    <script src="/jsfiles/header.js"></script>
+    <script src="/jsfiles/land.js"></script>
+    
+</body>
+</html>
